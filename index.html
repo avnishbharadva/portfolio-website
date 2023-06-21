@@ -22,37 +22,75 @@
             color: white;
             font-family: 'Poppins', sans-serif;
         }
-        nav{
+
+        nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 80px;
             background-color: rgb(34, 34, 97);
         }
-        nav ul{
+
+        nav ul {
             display: flex;
             justify-content: center;
         }
-        nav ul li{
+
+        nav ul li {
             list-style: none;
             margin: 0 23px;
         }
-        .left{
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.01rem;
+        }
+
+        main hr{
+            border: 0;
+            background: #9c97f1;
+            height: 1px;
+            margin: 60px 84px;
+        }
+
+        .left {
             font-size: 1.5rem;
         }
-        .firstSection{
+
+        .firstSection {
             display: flex;
             justify-content: space-around;
-            margin: 23px 0;
+            align-items: center;
+            margin: 130px 0;
         }
-        .firstSection div{
+
+        .firstSection>div {
             width: 30%;
         }
-        .leftSection{
-            background-color: red;
+
+        .leftSection {
+            font-size: 2.4rem;
         }
-        .rightSection{
-            background-color: red;
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
         }
     </style>
 </head>
@@ -63,11 +101,11 @@
             <div class="left">Avnish Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -76,12 +114,32 @@
     <main>
         <section class="firstSection">
             <div class="leftSection">
-                Hi, My name is Avnish
-                <div>and I am a Web Developer.</div>
+                Hi, My name is <span class="purple">Avnish</span>
+                <div>and I am a Passionate</div>
+                <span id="element"></span>
             </div>
-            <div class="rightSection">right</div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>Past Experience</h1>
         </section>
     </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Video Editor'],
+            typeSpeed: 70,
+            loop: true,
+            loopCount: Infinity,
+            showCursor: true,
+            cursorChar: '|',
+        });
+    </script>
 </body>
 
 </html>
